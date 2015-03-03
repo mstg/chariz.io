@@ -1,0 +1,78 @@
+doctype html
+html(lang="en")
+        head
+                base(target="_top")
+
+                title Chariz Installer
+
+                link(rel="stylesheet", href="/stylia/style.css")
+
+                meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+                meta(name="format-detection", content="telephone=no")
+
+                link(rel="shortcut icon", href="/icon@2x/cynthia.png")
+                link(rel="apple-touch-icon", href="/icon@2x/cynthia.png")
+
+                script(src="/stylia/style.js")
+
+        body(class="package")
+                .container
+
+                        .essential
+                                .icon img(src="/icon@2x/chariz.png")
+                                a.package#free(href="/learn", role="button")
+
+                        .moreinfo
+                                label.title#name Chariz Installer
+                                article
+                                    - if (package.depiction)
+                                        iframe#depiction(src=package.depiction)
+                                    - else
+                                        article#description= package.description
+
+                .side
+
+                        .links
+                                a#website(href="", role="button")
+                                a#support(href="", role="button")
+                                a#license(href="", role="button")
+                                a#policy(href="", role="button")
+
+                        label Information
+                        .information
+                                label Category:
+                                    p#cat System
+                                label Version:
+                                    p#ver 1.0.0
+                                label Price:
+                                    p#price $9.99
+                                label Size:
+                                    p#cat 0 MB
+                                label Seller:
+                                    p#seller Chariz Store
+                                br
+                                label Compatibility:
+                                    p#osver OS X 10.10.3 or later
+
+                        label More by HASHBANG Productions
+                        .moreby
+                                a#link1(href="chariz://package/io.chariz.installer")
+                                    img(src="/icon@2x/chariz.png")
+                                    div
+                                        label#name1 Chariz Installer
+                                        p#cat1 System
+                                a#link1(href="chariz://package/io.chariz.installer")
+                                    img(src="/icon@2x/chariz.png")
+                                    div
+                                        label#name1 Chariz Installer
+                                        p#cat1 System
+                                a#link1(href="chariz://package/io.chariz.installer")
+                                    img(src="/icon@2x/chariz.png")
+                                    div
+                                        label#name1 Chariz Installer
+                                        p#cat1 System
+                                a#link1(href="chariz://package/io.chariz.installer")
+                                    img(src="/icon@2x/chariz.png")
+                                    div
+                                        label#name1 Chariz Installer
+                                        p#cat1 System
