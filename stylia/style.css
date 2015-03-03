@@ -1,74 +1,87 @@
-/* DO NOT EDIT WITHOUT NOTIFYING */
-
 body {
-	font-family: -apple-system-font, "Helvetica Neue", Helvetica, sans-serif;
         position: relative;
-	min-width:1000px;
-    max-width:1200px;
-	min-height:100vh;
-	margin:0 auto
+        
+        font-family: -apple-system-font, "Helvetica Neue", Helvetica, sans-serif;
+        
+
+        min-width:1000px;
+        max-width:1200px;
+        min-height:100vh;
+
+        margin:0 auto
 }
 
 body.promo {
+        display:block;
+        position: relative;
+        overflow:hidden;
+        
         font-family: -apple-system-font, "HelveticaNeue-Light","Helvetica Neue",Helvetica,sans-serif;
         font-weight:normal;
-	display:block;
-	background-color:#fff;
-	padding-left:60px;
-	overflow:hidden;
-	min-width:0;
+
+        background-color:#fff;
+
+        min-width:0;
         max-width: 1000px;
-        margin: 0 auto 0 0;
-        position: relative;
         min-height: 100vh;
+        
+        padding-left:60px;
+        margin: 0 auto 0 0
 }
 
 body.promo .info {
-	width:45%;
-	left:60px;
-
+        display: table; /* unless you want to declare a height */
+        position: fixed;
+        
+        width:45%;
+        
     	margin:auto 0;
-    	display: table; /* unless you want to declare a height */
-    	position: fixed;
-    	top: 0; bottom: 0;
+    	
+    	top: 0;
+        bottom: 0;
+        left:60px
 }
 
 body.promo .info p {
-	margin:30px 10px 30px 0
+        margin:30px 10px 30px 0
 }
 
 body.promo .hero img {
-	width:70%;
-	height:auto;	
+        position:absolute;
+        
+        width:70%;
+        height:auto;
 
-	position:absolute;
-	top:0;
-	bottom:0;
-	right:-35%;
-	margin: auto;
+        margin: auto;
+
+        top:0;
+        right:-35%;
+        bottom:0
 }
 
 body.promo .info h1 {
-	display: block;
-	font-size: 2em;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	margin-left: 0;
-	margin-right: 0;
-	font-weight: normal
+        display: block;
+
+        font-size: 2em;
+        font-weight: normal;
+        
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 0;
+        margin-right: 0
 }
 
 h1 {
-font-weight:normal
+        font-weight:normal
 }
 
 body.promo a[role=button] {
-	display: inline-block;
-	box-sizing: border-box;
+        display: inline-block;
+        box-sizing: border-box;
 
-	background-color:#fff;
-	color:#000;
-	text-decoration:none;
+        background-color:#fff;
+        color:#000;
+        text-decoration:none;
 
         padding:8px 15px;
         margin-right:5px;
@@ -77,298 +90,329 @@ body.promo a[role=button] {
         border: 2px solid #ececec;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
-        border-radius: 3px;
+        border-radius: 3px
 }
 
 body.promo a[role=button]:hover {
-	background-color:#ececec;
+        background-color:#ececec
 }
 
 body.promo a[role=button].action {
-	background-color:#007aff;
-	color:#fff;
-	border-color:#007aff
+        background-color:#007aff;
+        color:#fff;
+        border-color:#007aff
 }
 
 body.promo a[role=button].action:hover {
-	background-color:#005aff;
-	border-color:#005aff
-}
-
-
-/* PACKAGE STYLES - DO NOT EDIT WITHOUT NOTIFYING */
-
-body {
-max-width:1200px;
+        background-color:#005aff;
+        border-color:#005aff
 }
 
 .link {
-color:#747474;
-text-decoration:none
+        color:#747474;
+        text-decoration:none
 }
 
 .link:hover {
-text-decoration:underline
+        text-decoration:underline
 }
 
 .container {
-display:inline-block;
-padding:35px 10px 25px 20px;
-width:700px;
-max-width:1000px;
+        display:inline-block;
+
+        width:700px;
+        max-width:1000px;
+        
+        padding:35px 10px 25px 20px
 }
 
 .main {
-display:inline-block;
-width:740px;
-max-width:1000px
+        display:inline-block;
 
-font-size:11px;
-font-weight:300;
+        font-size:11px;
+        font-weight:300;
 
-margin:0 0 0 20px;
-padding:0
+        width:740px;
+        max-width:1000px;
+
+        padding:0;
+        margin:0 0 0 20px
 }
 
 .side {
-display:inline-block;
-position:absolute;
-right:0px;
-width:210px;
+        display:inline-block;
+        position:absolute;
 
-font-size:11px;
-font-weight:300
+        font-size:11px;
+        font-weight:300;
+        
+        width:210px;
+        
+        right:0px
 }
 
 label {
-display:block;
-font-size:13px;
-color:#53565e;
-margin-top:30px;
+        display:block;
+        
+        font-size:13px;
+        color:#53565e;
+
+        margin-top:30px
 }
 
 .side div label {
-display:block;
-font-size:11px;
-color:#747474;
-margin-top:6px;
+        display:block;
+
+        font-size:11px;
+        color:#747474;
+        
+        margin-top:6px
 }
 
 .side div label p {
-display:inline;
-color:#000;
+        display:inline;
+
+        color:#000
 }
 
 .side hr,.main hr {
-width:190px;
-float:left;
-border:1px solid #d1d2d3;
-border-left:none;
-border-right:none;
-border-bottom:none;
-margin:5px 0;
-padding:0
+        float:left;
+
+        width:190px;
+
+        padding:0;
+        margin:5px 0;
+
+        border:1px solid #d1d2d3;
+        border-left:none;
+        border-right:none;
+        border-bottom:none
+
 }
 
 .main hr {
-width:100%;
+        width:100%
 }
 
 .side .links {
-margin-top:90px;
+        margin-top:90px
 }
 
 .side .links a[role=button] {
-width:210px;
-display: inline-block;
-box-sizing: border-box;
+        display: inline-block;
+        box-sizing: border-box;
 
-color:#747474;
-font-size:11px;
-text-decoration:none;
+        font-size:11px;
+        color:#747474;
+        text-decoration:none;
 
-padding:10px 10px;
-margin:0;        
+        width:210px;
 
-background-image: url('chevron.svg');
-background-position:195px center;
-background-repeat: no-repeat;
--webkit-background-size: 6px 9px;
-background-size: 6px 9px;
+        padding:10px 10px;
+        margin:0;
+
+        background-image: url('chevron.svg');
+        background-position:195px center;
+        background-repeat: no-repeat;
+        -webkit-background-size: 6px 9px;
+        background-size: 6px 9px
 }
 
 .side .links a[role=button]:hover {
-text-decoration:underline;
+        text-decoration:underline
 }
 
 .side .moreby a {
-height:40px;
-margin-top:10px;
-margin-bottom:10px;
-display:block
+        display:block;
+
+        height:40px;
+        
+        margin-top:10px;
+        margin-bottom:10px
 }
 
 .side .moreby a img {
-display:inline-block;
-width:38px;
-height:38px;
+        display:inline-block;
+        
+        width:38px;
+        height:38px
 }
 
 .side .moreby a div {
-display:inline-block;
-margin-left:5px;
-text-decoration:none;
-vertical-align:top;
-max-width:130px
+        display:inline-block;
+        vertical-align:top;
+        
+        text-decoration:none;
+
+        max-width:130px;
+        
+        margin-left:5px
 }
 
 .side .moreby a label {
-display:block;
-font-size:11px;
-color:#000;
-margin:0
+        display:block;
+        
+        font-size:11px;
+        color:#000;
+
+        margin:0
 }
 
 .side .moreby a label:hover {
-text-decoration:underline;
+        text-decoration:underline;
 }
 
 .side .moreby a p {
-display:block;
-color:#747474;
-font-size:10px;
-margin:0
+        display:block;
+
+        font-size:10px;
+        color:#747474;
+        
+        margin:0
 }
 
 label.title {
-display:inline-block;
-font-weight:normal;
-font-size:24px;
-margin:0
+        display:inline-block;
+ 
+        font-weight:normal;
+        font-size:24px;
+
+        margin:0
 }
 
 .icon img {
-width:140px;
-height:140px;
-margin-bottom:14px
+        width:140px;
+        height:140px;
+
+        margin-bottom:14px
 }
 
 .essential {
-display:inline-block;
-width:180px;
-text-align:center;
-margin:0;
+        display:inline-block;
+        
+        width:180px;
+        
+        text-align:center;
+
+        margin:0
 }
 
 .moreinfo {
-display:inline-block;
-vertical-align:top;
-margin:0 0 0 10px;
-width:470px;
-max-width:700px;
+        display:inline-block;
+        vertical-align:top;
+        
+        width:470px;
+        max-width:700px;
+        
+        margin:0 0 0 10px
 }
 
-.moreinfo p {
-font-size:12px;
-font-weight:normal;
-margin-top:10px;
-line-height: 16px;
+.moreinfo article {
+        font-size:12px;
+        font-weight:normal;
+        line-height: 16px;
+        
+        margin-top:10px
 }
 
 .moreinfo a[role=button].age {
-display:inline-block;
-font-size:10px;
-color:#747474;
-padding-top:1px;
-padding-bottom:1px;
-padding-left:3px;
-padding-right:3px;
-border:1px solid #747474;
-align:text-top;
+        display:inline-block;
+        
+        font-size:10px;
+        color:#747474;
+
+        border:1px solid #747474;
+
+        padding-top:1px;
+        padding-bottom:1px;
+        padding-left:3px;
+        padding-right:3px
 }
 
 a[role=button].package {
-display: inline-block;
-box-sizing: border-box;
+        display: inline-block;
+        box-sizing: border-box;
 
-background-color:#fff;
-color:#000;
-font-size:14px;
-text-decoration:none;
-padding:2px 10px;
-margin:0;
-border: 1px solid #ececec;
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
-border-radius: 3px;
+        font-size:14px;
+        color:#000;
+        background-color:#fff;
+        text-decoration:none;
+        
+        padding:2px 10px;
+        margin:0;
+        
+        border: 1px solid #ececec;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px
 }
 
 #paid {
-background-color:#007aff;
-color:#fff;
-border-color:#007aff
+        color:#fff;
+        background-color:#007aff;
+        border-color:#007aff
 }
 
 #paid:after {
-content: '$9.99'
+        content: '$9.99'
 }
 
 #paid:hover {
-background-color:#fff;
-color:#007aff;
-border-color:#007aff
+        color:#007aff;
+        background-color:#fff;
+        border-color:#007aff
 }
 
 #paid:hover:after {
-content: 'BUY'
+        content: 'BUY'
 }
 
 #free {
-background-color:#fff;
-color:#007aff;
-border-color:#007aff
+        color:#007aff;
+        background-color:#fff;
+        border-color:#007aff
 }
 
 #free:after {
-content: 'GET'
+        content: 'GET'
 }
 
 #free:hover {
-background-color:#fff;
-color:#00cc00;
-border-color:#00cc00;
+        color:#00cc00;
+        background-color:#fff;
+        border-color:#00cc00
 }
 
 #free:hover:after {
-content: 'INSTALL'
+        content: 'INSTALL'
 }
 
 #modify {
-background-color:#fff;
-color:orange;
-border-color:orange
+        color:orange;
+        background-color:#fff;
+        border-color:orange
 }
 
 #modify:after {
-content: 'MODIFY'
+        content: 'MODIFY'
 }
 
 #modify:hover {
-background-color:#ff3a2d;
-color:#fff;
-border-color:#ff3a2d
+        color:#fff;
+        background-color:#ff3a2d;
+        border-color:#ff3a2d
 }
 
 #modify:hover:after {
-content: 'REMOVE'
+        content: 'REMOVE'
 }
 
 #update {
-background-color:#fff;
-color:#007aff;
-border-color:#007aff;
+        color:#007aff;
+        background-color:#fff;
+        border-color:#007aff
 }
 
 #update:after {
-content: 'UPDATE'
+        content: 'UPDATE'
 }
