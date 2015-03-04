@@ -3,7 +3,7 @@ html(lang="en")
         head
                 base(target="_top")
 
-                title Chariz Installer
+                title= package.name + " · Chariz"
 
                 link(rel="stylesheet", href="/stylia/style.css")
 
@@ -19,11 +19,12 @@ html(lang="en")
                 .container
 
                         .essential
-                                .icon img(src="/icon@2x/chariz.png")
+                                .icon
+                                    img(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
                                 a.package#free(href="/learn", role="button")
 
                         .moreinfo
-                                label.title#name Chariz Installer
+                                label.title= package.name
                                 article
                                     - if (package.depiction)
                                         iframe#depiction(src=package.depiction)
@@ -33,28 +34,26 @@ html(lang="en")
                 .side
 
                         .links
-                                a#website(href="", role="button")
-                                a#support(href="", role="button")
-                                a#license(href="", role="button")
-                                a#policy(href="", role="button")
+                                a(href="package.homepage", role="button")= package.author + " Web Site"
+                                a(href="/support/" + package.identifier, role="button")= package.name + " Support"
 
                         label Information
                         .information
                                 label Category:
-                                    p#cat System
+                                    p= package.section
                                 label Version:
-                                    p#ver 1.0.0
+                                    p= package.version
                                 label Price:
                                     p#price $9.99
                                 label Size:
-                                    p#cat 0 MB
+                                    p= package.size
                                 label Seller:
                                     p#seller Chariz Store
                                 br
                                 label Compatibility:
                                     p#osver OS X 10.10.3 or later
 
-                        label More by HASHBANG Productions
+                        label= "More by " + package.author
                         .moreby
                                 a#link1(href="chariz://package/io.chariz.installer")
                                     img(src="/icon@2x/chariz.png")
