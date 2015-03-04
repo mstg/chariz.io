@@ -21,7 +21,7 @@ html(lang="en")
                         .essential
                                 .icon
                                     img(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
-                                a.package#free(href="/learn", role="button")
+                                a.package#free(href="", role="button") package.price
 
                         .moreinfo
                                 label.title= package.name
@@ -34,44 +34,46 @@ html(lang="en")
                 .side
 
                         .links
-                                a(href="package.homepage", role="button")= package.author + " Web Site"
+                                a(href=package.homepage, role="button")= package.author.name + " Web Site"
                                 a(href="/support/" + package.identifier, role="button")= package.name + " Support"
 
                         label Information
+                        hr
                         .information
                                 label Category:
                                     p= package.section
                                 label Version:
                                     p= package.version
                                 label Price:
-                                    p#price $9.99
+                                    p= package.price
                                 label Size:
                                     p= package.size
                                 label Seller:
-                                    p#seller Chariz Store
+                                    p Chariz Store
                                 br
                                 label Compatibility:
-                                    p#osver OS X 10.10.3 or later
+                                    p OS X 10.10.3 or later
 
-                        label= "More by " + package.author
+                    //    label= "More by " + package.author.name
+                        hr
                         .moreby
-                                a#link1(href="chariz://package/io.chariz.installer")
-                                    img(src="/icon@2x/chariz.png")
+                                a#link1(href="/package/" + package.related)
+                                    img(src="/icon/" + package.related.identifier + "/128.png")
                                     div
-                                        label#name1 Chariz Installer
-                                        p#cat1 System
-                                a#link1(href="chariz://package/io.chariz.installer")
-                                    img(src="/icon@2x/chariz.png")
+                                        label= package.related.name
+                                        p= package.related.section
+                                a#link2(href="/package/" + package.related)
+                                    img(src="/icon/" + package.related.identifier + "/128.png")
                                     div
-                                        label#name1 Chariz Installer
-                                        p#cat1 System
-                                a#link1(href="chariz://package/io.chariz.installer")
-                                    img(src="/icon@2x/chariz.png")
+                                        label= package.related.name
+                                        p= package.related.section
+                                a#link3(href="/package/" + package.related)
+                                    img(src="/icon/" + package.related.identifier + "/128.png")
                                     div
-                                        label#name1 Chariz Installer
-                                        p#cat1 System
-                                a#link1(href="chariz://package/io.chariz.installer")
-                                    img(src="/icon@2x/chariz.png")
+                                        label= package.related.name
+                                        p= package.related.section
+                                a#link4(href="/package/" + package.related)
+                                    img(src="/icon/" + package.related.identifier + "/128.png")
                                     div
-                                        label#name1 Chariz Installer
-                                        p#cat1 System
+                                        label= package.related.name
+                                        p= package.related.section
