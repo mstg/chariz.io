@@ -1,79 +1,79 @@
 doctype html
 html(lang="en")
-        head
-                base(target="_top")
+    head
+        meta(charset="UTF-8")
+        base(target="_top")
 
-                title= package.name + " · Chariz"
+        title= package.name + " • Chariz"
 
-                link(rel="stylesheet", href="/stylia/style.css")
+        link(rel="stylesheet", href="/stylia/style.css")
 
-                meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
-                meta(name="format-detection", content="telephone=no")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+        meta(name="format-detection", content="telephone=no")
 
-                link(rel="shortcut icon", href="/icon@2x/chariz.png")
-                link(rel="apple-touch-icon", href="/icon@2x/chariz.png")
+        link(rel="shortcut icon", href="/icon@2x/chariz.png")
+        link(rel="apple-touch-icon", href="/icon@2x/chariz.png")
 
-                script(src="/stylia/style.js")
+        script(src="/stylia/style.js")
 
-        body(class="package")
-                .container
+    body(class="package")
+        .container
 
-                        .essential
-                                .icon
-                                    img(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
-                                a.package#free(href="", role="button") package.price
+            .essential
+                .icon
+                    img(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
+                a.buy-button(href="", role="button", data-price=package.price)= package.price == 0 ? "FREE" : "$" + package.price
 
-                        .moreinfo
-                                label.title= package.name
-                                article
-                                    - if (package.depiction)
-                                        iframe#depiction(src=package.depiction)
-                                    - else
-                                        article#description= package.description
+                .moreinfo
+                    label.title= package.name
+                        - if (package.depiction)
+                            iframe#depiction(src=package.depiction)
+                        - else
+                            article#description= package.description
 
-                .side
+        .side
 
-                        .links
-                                a(href=package.homepage, role="button")= package.author.name + " Web Site"
-                                a(href="/support/" + package.identifier, role="button")= package.name + " Support"
+            .links
+                a(href= package.homepage, role="button")= package.author.name + " Web Site"
+                a(href="/support/" + package.identifier, role="button")= package.name + " Support"
 
-                        label Information
-                        hr
-                        .information
-                                label Category:
-                                    p= package.section
-                                label Version:
-                                    p= package.version
-                                label Price:
-                                    p= package.price
-                                label Size:
-                                    p= package.size
-                                label Seller:
-                                    p Chariz Store
-                                br
-                                label Compatibility:
-                                    p OS X 10.10.3 or later
+            label Information
+            hr
+            .information
+                label Category: 
+                    p= package.section
+                label Version: 
+                    p= package.version
+                label Price: 
+                    p= package.price == 0 ? "FREE" : "$" + package.price
+                label Size: 
+                    p= package.size + " bytes"
+                label Seller: 
+                    p Chariz Store
+                br
+                label Compatibility: 
+                    p OS X 10.10.3 or later
 
-                    //    label= "More by " + package.author.name
-                        hr
-                        .moreby
-                                a#link1(href="/package/" + package.related)
-                                    img(src="/icon/" + package.related.identifier + "/128.png")
-                                    div
-                                        label= package.related.name
-                                        p= package.related.section
-                                a#link2(href="/package/" + package.related)
-                                    img(src="/icon/" + package.related.identifier + "/128.png")
-                                    div
-                                        label= package.related.name
-                                        p= package.related.section
-                                a#link3(href="/package/" + package.related)
-                                    img(src="/icon/" + package.related.identifier + "/128.png")
-                                    div
-                                        label= package.related.name
-                                        p= package.related.section
-                                a#link4(href="/package/" + package.related)
-                                    img(src="/icon/" + package.related.identifier + "/128.png")
-                                    div
-                                        label= package.related.name
-                                        p= package.related.section
+//            label= "More by " + package.author.name
+            hr
+            .moreby
+                a#link1(href="/package/" + package.related)
+                    img(src="/icon/" + package.related.identifier + "/128.png")
+                    div
+                        label= package.related.name
+                        p= package.related.section
+                a#link2(href="/package/" + package.related)
+                    img(src="/icon/" + package.related.identifier + "/128.png")
+                    div
+                        label= package.related.name
+                        p= package.related.section
+                a#link3(href="/package/" + package.related)
+                    img(src="/icon/" + package.related.identifier + "/128.png")
+                    div
+                        label= package.related.name
+                        p= package.related.section
+                a#link4(href="/package/" + package.related)
+                    img(src="/icon/" + package.related.identifier + "/128.png")
+                    div
+                        label= package.related.name
+                        p= package.related.section
