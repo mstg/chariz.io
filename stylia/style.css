@@ -119,8 +119,9 @@ body.promo a[role=button].action:hover {
 .container {
     display:inline-block;
 
-    width:700px;
-    max-width:1000px;
+    width:75%;
+/*  width:700px;
+    max-width:1000px; */
         
     padding:35px 10px 25px 20px
 }
@@ -310,9 +311,10 @@ label.title {
 .moreinfo {
     display:inline-block;
     vertical-align:top;
-        
-    width:470px;
-    max-width:700px;
+    
+    width:75%;    
+/*  width:470px;
+    max-width:700px; */
         
     margin:0 0 0 10px
 }
