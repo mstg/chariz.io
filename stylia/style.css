@@ -358,18 +358,18 @@ a[role=button].buy-button {
 
 a[role=button].buy-button:hover {
     color:#007aff;
-    background-color:#fff;
+    background-color:transparent;
     border-color:#007aff
 }
 
 a[role=button].buy-button[data-price=0] {
     color:#007aff;
-    background-color:#fff;
+    background-color:transparent;
     border-color:#007aff
 }
 
 a[role=button].buy-button[data-price=0]:hover {
     color:#00cc00;
-    background-color:#fff;
+    background-color:transparent;
     border-color:#00cc00
 }
