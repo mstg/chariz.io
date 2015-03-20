@@ -18,7 +18,6 @@ html(lang="en")
 
     body(class="package")
         .container
-
             .essential
                 .icon
                     img(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
@@ -31,12 +30,9 @@ html(lang="en")
                         - else
                             article#description= package.description
 
-        .side
-
-            .links
-                a(href= package.homepage, role="button")= package.author.name + " Web Site"
-                a(href="/support/" + package.identifier, role="button")= package.name + " Support"
-
+        side
+            a.link(href= package.homepage, role="button")= package.author.name + " Web Site"
+            a.link(href="/support/" + package.identifier, role="button")= package.name + " Support"
             label Information
             hr
             .information
@@ -53,26 +49,24 @@ html(lang="en")
                 br
                 label Compatibility: 
                     p OS X 10.10.3 or later
-
             label= "More by " + package.author.name
             hr
-            .moreby
-                a#link1(href="/package/" + package.identifier)
+                a#more1(href="/package/" + package.identifier)
                     img(src="/icon/" + package.identifier + "/128.png")
                     div
                         label= package.name
                         p= package.section
-                a#link2(href="/package/" + package.identifier)
+                a#more2(href="/package/" + package.identifier)
                     img(src="/icon/" + package.identifier + "/128.png")
                     div
                         label= package.name
                         p= package.section
-                a#link3(href="/package/" + package.identifier)
+                a#more3(href="/package/" + package.identifier)
                     img(src="/icon/" + package.identifier + "/128.png")
                     div
                         label= package.name
                         p= package.section
-                a#link4(href="/package/" + package.identifier)
+                a#more4(href="/package/" + package.identifier)
                     img(src="/icon/" + package.identifier + "/128.png")
                     div
                         label= package.name

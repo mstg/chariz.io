@@ -30,7 +30,7 @@ html(lang="en")
 
         .main
                 label Best New Tweaks
-                    a.link#sub(href="") See All
+                    a#sub(href="") See All
                     hr
                     .items
                         - featuredPackages.forEach(function(package) {
@@ -42,20 +42,15 @@ html(lang="en")
                                         p= package.section
                         - });
 
-        .side
+        side
             label Quick Links
             hr
-            div
-                label
-                    a.link(href="chariz.signin.url") Sign In
-                label
-                    a.link(href="chariz.account") Account
-                label
-                    a.link(href="chariz.moresources") More Package Sources
-                label
-                    a.link(href="chariz.support") Support
+            a.link(href="") Sign In
+            a.link(href="") Account
+            a.link(href="") More Package Sources
+            a.link(href="") Support
 
             label Top Packages
-                a.link#sub(href="") See All
+                a#sub(href="") See All
                 hr
                 div

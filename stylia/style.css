@@ -1,21 +1,23 @@
 body {
     position: relative;
-        
-    font-family: -apple-system-font, "Helvetica Neue", Helvetica, sans-serif;
+
+/*    font-family: -apple-system-font; */
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
         
     min-width:1000px;
     max-width:1200px;
     min-height:100vh;
 
-    margin:0 auto
+    margin:0 auto;
 }
 
 body.promo {
     display:block;
     position: relative;
     overflow:hidden;
-        
-    font-family: -apple-system-font, "HelveticaNeue-Light","Helvetica Neue",Helvetica,sans-serif;
+
+/*    font-family: -apple-system-font; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, sans-serif;
     font-weight:normal;
 
     background-color:#fff;
@@ -25,7 +27,7 @@ body.promo {
     min-height: 100vh;
         
     padding-left:60px;
-    margin: 0 auto 0 0
+    margin: 0 auto 0 0;
 }
 
 body.promo .info {
@@ -35,14 +37,14 @@ body.promo .info {
     width:45%;
         
     margin:auto 0;
-    	
+        
     top: 0;
     bottom: 0;
-    left:60px
+    left:60px;
 }
 
 body.promo .info p {
-    margin:30px 10px 30px 0
+    margin:30px 10px 30px 0;
 }
 
 body.promo .hero img {
@@ -55,7 +57,7 @@ body.promo .hero img {
 
     top:0;
     right:-35%;
-    bottom:0
+    bottom:0;
 }
 
 body.promo .info h1 {
@@ -67,11 +69,7 @@ body.promo .info h1 {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 0;
-    margin-right: 0
-}
-
-h1 {
-    font-weight:normal
+    margin-right: 0;
 }
 
 body.promo a[role=button] {
@@ -89,31 +87,22 @@ body.promo a[role=button] {
     border: 2px solid #ececec;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 3px
+    border-radius: 3px;
 }
 
 body.promo a[role=button]:hover {
-    background-color:#ececec
+    background-color:#ececec;
 }
 
 body.promo a[role=button].action {
     background-color:#007aff;
     color:#fff;
-    border-color:#007aff
+    border-color:#007aff;
 }
 
 body.promo a[role=button].action:hover {
     background-color:#005aff;
-    border-color:#005aff
-}
-
-.link {
-    color:#747474;
-    text-decoration:none
-}
-
-.link:hover {
-    text-decoration:underline
+    border-color:#005aff;
 }
 
 .container {
@@ -123,7 +112,7 @@ body.promo a[role=button].action:hover {
 /*  width:700px;
     max-width:1000px; */
         
-    padding:35px 10px 25px 20px
+    padding:35px 10px 25px 20px;
 }
 
 .main {
@@ -136,10 +125,10 @@ body.promo a[role=button].action:hover {
     max-width:1000px;
 
     padding:0;
-    margin:0 0 0 20px
+    margin:0 0 0 20px;
 }
 
-.side {
+side {
     display:inline-block;
     position:absolute;
 
@@ -147,8 +136,12 @@ body.promo a[role=button].action:hover {
     font-weight:300;
         
     width:210px;
-        
-    right:0px
+
+    right:0px;
+}
+
+body.package side {
+    padding-top:156px;
 }
 
 label {
@@ -157,34 +150,43 @@ label {
     font-size:13px;
     color:#53565e;
 
-    margin-top:30px
+    margin-top:30px;
 }
 
 #sub {
     display:inline;
-    float:right
+    float:right;
+    vertical-align: bottom;
+
+    font-size:11px;
+    color:#747474;
+    text-decoration:none;
 }
 
-.side #sub {
-    margin-right:20px
+#sub:hover {
+    text-decoration:underline;
 }
 
-.side div label {
+side #sub {
+    margin-right:20px;
+}
+
+side div label {
     display:block;
 
     font-size:11px;
     color:#747474;
         
-    margin-top:6px
+    margin-top:6px;
 }
 
-.side div label p {
+side div label p {
     display:inline;
 
-    color:#000
+    color:#000;
 }
 
-.side hr,.main hr {
+side hr,.main hr {
     float:left;
 
     width:190px;
@@ -195,19 +197,28 @@ label {
     border:1px solid #d1d2d3;
     border-left:none;
     border-right:none;
-    border-bottom:none
+    border-bottom:none;
 
 }
 
 .main hr {
-    width:100%
+    width:100%;
 }
 
-.side .links {
-    margin-top:156px
+.link {
+    display: block;
+
+    color:#747474;
+    text-decoration:none;
+
+    margin:6px 0 6px 0;
 }
 
-.side .links a[role=button] {
+.link:hover {
+    text-decoration:underline
+}
+
+a[role=button].link {
     display: inline-block;
     box-sizing: border-box;
 
@@ -224,30 +235,32 @@ label {
     background-position:195px center;
     background-repeat: no-repeat;
     -webkit-background-size: 6px 9px;
-    background-size: 6px 9px
+    background-size: 6px 9px;
 }
 
-.side .links a[role=button]:hover {
-    text-decoration:underline
+a[role=button].link:hover {
+    text-decoration:underline;
 }
 
-.side .moreby a {
+a#more1, a#more2, a#more3, a#more4 {
     display:block;
+
+    text-decoration:none;
 
     height:40px;
         
     margin-top:10px;
-    margin-bottom:10px
+    margin-bottom:10px;
 }
 
-.side .moreby a img {
+a#more1 img, a#more2 img, a#more3 img, a#more4 img {
     display:inline-block;
         
     width:38px;
-    height:38px
+    height:38px;
 }
 
-.side .moreby a div {
+a#more1 div, a#more2 div, a#more3 div, a#more4 div {
     display:inline-block;
     vertical-align:top;
         
@@ -255,29 +268,29 @@ label {
 
     max-width:130px;
         
-    margin-left:5px
+    margin-left:5px;
 }
 
-.side .moreby a label {
+a#more1 label, a#more2 label, a#more3 label, a#more4 label {
     display:block;
         
     font-size:11px;
     color:#000;
 
-    margin:0
+    margin:0;
 }
 
-.side .moreby a label:hover {
+a#more1 label:hover, a#more2 label:hover, a#more3 label:hover, a#more4 label:hover {
     text-decoration:underline;
 }
 
-.side .moreby a p {
+a#more1 p, a#more2 p, a#more3 p, a#more4 p {
     display:block;
 
     font-size:10px;
     color:#747474;
         
-    margin:0
+    margin:0;
 }
 
 label.title {
@@ -288,14 +301,14 @@ label.title {
         
     color:#000;
 
-    margin:0
+    margin:0;
 }
 
 .icon img {
     width:140px;
     height:140px;
 
-    margin-bottom:14px
+    margin-bottom:14px;
 }
 
 .essential {
@@ -305,7 +318,7 @@ label.title {
         
     text-align:center;
 
-    margin:0
+    margin:0;
 }
 
 .moreinfo {
@@ -316,7 +329,7 @@ label.title {
 /*  width:470px;
     max-width:700px; */
         
-    margin:0 0 0 10px
+    margin:0 0 0 10px;
 }
 
 .moreinfo article {
@@ -324,7 +337,7 @@ label.title {
     font-weight:normal;
     line-height: 16px;
         
-    margin-top:10px
+    margin-top:10px;
 }
 
 .moreinfo a[role=button].age {
@@ -335,7 +348,7 @@ label.title {
 
     border:1px solid #747474;
 
-    padding:1px 3px 1px 3px
+    padding:1px 3px 1px 3px;
 }
 
 a[role=button].buy-button {
@@ -353,23 +366,23 @@ a[role=button].buy-button {
     border: 1px solid #007aff;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 3px
+    border-radius: 3px;
 }
 
 a[role=button].buy-button:hover {
     color:#007aff;
     background-color:transparent;
-    border-color:#007aff
+    border-color:#007aff;
 }
 
 a[role=button].buy-button[data-price=0] {
     color:#007aff;
     background-color:transparent;
-    border-color:#007aff
+    border-color:#007aff;
 }
 
 a[role=button].buy-button[data-price=0]:hover {
     color:#00cc00;
     background-color:transparent;
-    border-color:#00cc00
+    border-color:#00cc00;
 }
