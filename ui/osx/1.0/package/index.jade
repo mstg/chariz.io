@@ -19,8 +19,7 @@ html(lang="en")
     body(class="package")
         .container
             .essential
-                .icon
-                    img(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
+                img.icon(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
                 a.buy-button(href="", role="button", data-price=package.price)= package.price == 0 ? "FREE" : "$" + package.price
 
                 .moreinfo

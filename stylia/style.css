@@ -112,7 +112,6 @@ main {
     font-weight: 300;
 
     width: 745px;
-    max-width: 1000px;
 
     padding: 0;
     margin: 0 25px 0 20px;
@@ -125,37 +124,36 @@ body.section main, body.section side {
 .container {
     display: inline-block;
 
-    width: 75%;
-/*  width: 700px;
-    max-width: 1000px; */
+    width: 745px;
         
-    padding: 35px 10px 25px 20px;
+    padding: 35px 0 25px 20px;
+    margin-right: 25px;
 }
 
 .essential {
     display: inline-block;
         
     width: 180px;
-        
-    text-align: center;
+    height: 180px;
+
+    text-align:center;
 
     margin: 0;
 }
 
-.icon img {
-    width: 140px;
+img.icon {
+    display:block;
+
     height: 140px;
 
-    margin-bottom: 14px;
+    margin: 0 auto 14px auto;
 }
 
 .moreinfo {
     display: inline-block;
     vertical-align: top;
-    
-    width: 74%;    
-/*  width: 470px;
-    max-width: 700px; */
+   
+    width: 550px;
         
     margin: 0 0 0 10px;
 }
@@ -176,6 +174,8 @@ side {
     font-weight: 300;
         
     width: 210px;
+
+    margin-left: 25px;
 
     right: 0px;
 }
