@@ -105,17 +105,21 @@ body.promo a[role=button].action:hover {
     border-color: #005aff;
 }
 
-.main {
+main {
     display: inline-block;
 
     font-size: 11px;
     font-weight: 300;
 
-    width: 740px;
+    width: 745px;
     max-width: 1000px;
 
     padding: 0;
-    margin: 0 0 0 20px;
+    margin: 0 25px 0 20px;
+}
+
+body.section main, body.section side {
+    margin-top: 40px;
 }
 
 .container {
@@ -233,7 +237,7 @@ side div label p {
     color: #000;
 }
 
-side hr,.main hr {
+side hr,main hr {
     float: left;
 
     width: 190px;
@@ -248,8 +252,17 @@ side hr,.main hr {
 
 }
 
-.main hr {
+main hr {
     width: 100%;
+}
+
+.section {
+    color: #000;
+    text-decoration: none;
+}
+
+.section:hover {
+    text-decoration: underline;
 }
 
 .link {
@@ -262,7 +275,7 @@ side hr,.main hr {
 }
 
 .link:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 a[role=button].link {
@@ -290,14 +303,13 @@ a[role=button].link:hover {
 }
 
 a#more1, a#more2, a#more3, a#more4 {
-    display: block;
+    display: inline-block;
 
     text-decoration: none;
 
-    height: 40px;
-        
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width:210px;
+
+    margin-top: 5px;
 }
 
 a#more1 img, a#more2 img, a#more3 img, a#more4 img {
