@@ -6,6 +6,7 @@ html(lang="en")
         title Featured
 
         link(rel="stylesheet", href="/stylia/style.css")
+        link(rel="stylesheet", href="/stylia/temporary.css")
 
         meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
         meta(name="format-detection", content="telephone=no")
@@ -16,33 +17,32 @@ html(lang="en")
         script(src="/stylia/style.js")
 
     style
-        | .carousel {display:block;overflow:hidden;margin:0 20px 0 20px;max-width:1160px;-webkit-border-bottom-right-radius: 13px;-webkit-border-bottom-left-radius: 13px;-moz-border-radius-bottomright: 13px;-moz-border-radius-bottomleft: 13px;border-bottom-right-radius: 13px;border-bottom-left-radius: 13px;}
+        | .carousel {display:block;overflow:hidden;margin:0 20px 0 20px;max-width:1160px;-webkit-border-bottom-right-radius: 9px;-webkit-border-bottom-left-radius: 9px;-moz-border-radius-bottomright: 9px;-moz-border-radius-bottomleft: 9px;border-bottom-right-radius: 9px;border-bottom-left-radius: 9px;}
         | .carousel img {height:300px}
-        | .items {min-width:750px;max-width:1000px;}
-        | .item {display:inline-block;width:250px;height:75px;margin-bottom:30px;}
-        | .item img {display:inline-block;width:75px;height:75px;}
-        | .item div {display:inline-block;vertical-align:top;text-decoration:none;width:170px;margin-left:5px;}
+        | .items {display:block;}
+        | .item {display:inline-block;width:230px;height:75px;margin-top:15px;margin-bottom:30px;}
+        | .item img {display:inline-block;height:75px;}
+        | .item div {display:inline-block;vertical-align:top;text-decoration:none;margin-left:5px;}
         | .item label {display:block;font-size:11px;color:#000;margin:0;}
         | .item label:hover {text-decoration:underline;}
         | .item p {display:block;font-size:10px;color:#747474;margin:0;}
 
     body
         .carousel
-            img(src="/carousel/monster.png")
+            img(src="/carousel/charizwelcome.png")
 
         main
                 label Best New Tweaks
-                    a#sub(href="") See All
-                    hr
-                    .items
-                        - featuredPackages.forEach(function(package) {
-                            .item
-                                a(href="/package/" + package.identifier)
-                                    img(src="/icon/" + package.identifier + "/128.png")
-                                    div
-                                        label= package.name
-                                        p= package.section
-                        - });
+                hr
+                .items
+                    - featuredPackages.forEach(function(package) {
+                        .item
+                            a(href="/package/" + package.identifier)
+                                img(src="/icon/" + package.identifier + "/128.png")
+                                div
+                                    label= package.name
+                                    p= package.section
+                    - });
 
         side
             label Quick Links
