@@ -1,7 +1,7 @@
 body {
     position: relative;
 
-/*    font-family: -apple-system-font; */
+/*  font-family: -apple-system-font; */
     font-family: "Helvetica Neue", Helvetica, sans-serif;
         
     min-width: 1000px;
@@ -16,7 +16,7 @@ body.promo {
     position: relative;
     overflow: hidden;
 
-/*    font-family: -apple-system-font; */
+/*  font-family: -apple-system-font; */
     font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, sans-serif;
     font-weight: normal;
 
@@ -126,7 +126,7 @@ body.section main, body.section side {
 
     width: 745px;
         
-    padding: 35px 0 25px 20px;
+    padding: 35px 0 0 20px;
     margin-right: 25px;
 }
 
@@ -158,12 +158,21 @@ img.icon {
     margin: 0 0 0 10px;
 }
 
-.moreinfo article {
+article#description {
     font-size: 12px;
     font-weight: normal;
     line-height: 16px;
         
     margin-top: 10px;
+}
+
+iframe#depiction {
+    width: 100%;
+    height: auto;
+
+    margin-top: 10px;
+
+    border: none;
 }
 
 side {
