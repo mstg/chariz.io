@@ -22,38 +22,23 @@ app.get('/', function (req, res) {
 })
 
 app.get('/ui/osx/1.0/featured/', function (req, res) {
-  res.render('osx/featured', { 
+  res.render('featured', { 
     title: 'Featured', 
     package: {
       identifier: 'ws.hbang.typestatusmac', 
       name: 'TypeStatus', 
       section: 'Tweaks'
+    },
+    url: {
+      signin: 'https://accounts.chariz.io/', 
+      account: 'https://accounts.chariz.io/profile/',
+      moresources: '/moresources/',
+      support: 'https://twitter.com/charizteam'
     }
   });
 })
 
-app.get('/ui/osx/1.0/package/', function (req, res) {
-  res.render('osx/package', { 
-    title: 'Package',
-    package: {
-      identifier: 'ws.hbang.typestatusmac',
-      name: 'TypeStatus',
-      section: 'Tweaks',
-      homepage: 'http://typestatus.com',
-      version: '1.0.0',
-      size: '120',
-      price: '0',
-      author: {
-        name: 'HASHBANG Productions',
-        email: 'support@hbang.ws'
-      },
-      description: 'Ever wish you could tell when someone else is typing an iMessage to you or reading an iMessage you’ve sent from where ever you are? With TypeStatus, now you can. The contact’s name will be shown on your device’s status bar, regardless of where you are in OS X. You can also use a simple status bar icon instead of an overlay for typing notifications.',
-      depiction: 'http://typestatus.com'
-    }
-  });
-})
-
-app.get('/package/', function (req, res) {
+app.get('/ui/osx/1.0/package/:id/', function (req, res) {
   res.render('package', { 
     title: 'Package',
     package: {
@@ -61,14 +46,36 @@ app.get('/package/', function (req, res) {
       name: 'TypeStatus',
       section: 'Tweaks',
       homepage: 'http://typestatus.com',
-      version: '1.0.0',
-      size: '120',
+      version: '2.0',
+      size: '12022346',
       price: '0',
       author: {
         name: 'HASHBANG Productions',
         email: 'support@hbang.ws'
       },
-      description: 'Ever wish you could tell when someone else is typing an iMessage to you or reading an iMessage you’ve sent from where ever you are? With TypeStatus, now you can. The contact’s name will be shown on your device’s status bar, regardless of where you are in OS X. You can also use a simple status bar icon instead of an overlay for typing notifications.'
+      description: 'Ever wish you could tell when someone else is typing an iMessage to you or reading an iMessage you’ve sent from where ever you are? With TypeStatus, now you can. The contact’s name will be shown on your device’s status bar, regardless of where you are in OS X. You can also use a simple status bar icon instead of an overlay for typing notifications.',
+      depiction: 'https://io.tmnlsthrn.com/dep/ts.html'
+    }
+  });
+})
+
+app.get('/package/:id/', function (req, res) {
+  res.render('package', { 
+    title: 'Package',
+    package: {
+      identifier: 'ws.hbang.typestatusmac',
+      name: 'TypeStatus',
+      section: 'Tweaks',
+      homepage: 'http://typestatus.com',
+      version: '2.0',
+      size: '12022346',
+      price: '0',
+      author: {
+        name: 'HASHBANG Productions',
+        email: 'support@hbang.ws'
+      },
+      description: 'Ever wish you could tell when someone else is typing an iMessage to you or reading an iMessage you’ve sent from where ever you are? With TypeStatus, now you can. The contact’s name will be shown on your device’s status bar, regardless of where you are in OS X. You can also use a simple status bar icon instead of an overlay for typing notifications.',
+      depiction: 'https://io.tmnlsthrn.com/dep/ts.html'
     }
   });
 })
