@@ -4,69 +4,68 @@ block title
 	title= package.name + " · Chariz"
 
 block content
-	body.package
-		.container
-			.essential
-				img.icon(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
-				a.buy-button(href="chariz://package/" + package.identifier, role="button", data-price=package.price)= package.price == 0 ? "FREE" : "$" + package.price
+	.container
+		.essential
+			img.icon(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
+			a.buy-button(href="chariz://package/" + package.identifier, role="button", data-price=package.price)= package.price == 0 ? "FREE" : "$" + package.price
 
-			.moreinfo
-				label.title= package.name == null ? package.identifier : package.name
-				- if (package.depiction)
-					iframe#depiction(src=package.depiction)
-				- else
-					article#description= package.description
+		.moreinfo
+			label.title= package.name == null ? package.identifier : package.name
+			- if (package.depiction)
+				iframe#depiction(src=package.depiction)
+			- else
+				article#description= package.description
 
-		side
-			- if (package.homepage != null)
-				a.link(href= package.homepage, role="button")= package.author.name + " Web Site"
-			- else 
-				a.link(role="button", style="visibility:hidden") Author Web Site
-			- if (package.author.email != null)
-				- if (package.name != null)
-					a.link(href="/support/" + package.identifier + "/", role="button")= package.name + " Support"
-				- else
-					a.link(href="/support/" + package.identifier + "/", role="button") Package Support
-			- else 
-				a.link(role="button", style="visibility:hidden") Package Support
-			label Information
+	side
+		- if (package.homepage != null)
+			a.link(href= package.homepage, role="button")= package.author.name + " Web Site"
+		- else 
+			a.link(role="button", style="visibility:hidden") Author Web Site
+		- if (package.author.email != null)
+			- if (package.name != null)
+				a.link(href="/support/" + package.identifier + "/", role="button")= package.name + " Support"
+			- else
+				a.link(href="/support/" + package.identifier + "/", role="button") Package Support
+		- else 
+			a.link(role="button", style="visibility:hidden") Package Support
+		label Information
+		hr
+		.information
+			label Category: 
+				p
+					a.section(href="ui/osx/1.0/section/" + package.section)= package.section
+			label Version: 
+				p= package.version
+			label Price: 
+				p= package.price == 0 ? "FREE" : "$" + package.price
+			label Size: 
+				p= package.size + " bytes"
+			- if (package.price != 0)
+				label Seller: 
+					p Chariz Store
+			br
+			label Compatibility: 
+				p OS X 10.10.3 or later
+		-if (package.dev != null)
+			label= "More by " + package.author.name
 			hr
-			.information
-				label Category: 
-					p
-						a.section(href="ui/osx/1.0/section/" + package.section)= package.section
-				label Version: 
-					p= package.version
-				label Price: 
-					p= package.price == 0 ? "FREE" : "$" + package.price
-				label Size: 
-					p= package.size + " bytes"
-				- if (package.price != 0)
-					label Seller: 
-						p Chariz Store
-				br
-				label Compatibility: 
-					p OS X 10.10.3 or later
-			-if (package.dev != null)
-				label= "More by " + package.author.name
-				hr
-				a#more1(href="/package/" + package.identifier)
-					img(src="/icon/" + package.identifier + "/128.png")
-					div
-						label= package.name
-						p= package.section
-				a#more2(href="/package/" + package.identifier)
-					img(src="/icon/" + package.identifier + "/128.png")
-					div
-						label= package.name
-						p= package.section
-				a#more3(href="/package/" + package.identifier)
-					img(src="/icon/" + package.identifier + "/128.png")
-					div
-						label= package.name
-						p= package.section
-				a#more4(href="/package/" + package.identifier)
-					img(src="/icon/" + package.identifier + "/128.png")
-					div
-						label= package.name
-						p= package.section
+			a#more1(href="/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+				div
+					label= package.name
+					p= package.section
+			a#more2(href="/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+				div
+					label= package.name
+					p= package.section
+			a#more3(href="/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+				div
+					label= package.name
+					p= package.section
+			a#more4(href="/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+				div
+					label= package.name
+					p= package.section
