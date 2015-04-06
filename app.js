@@ -40,7 +40,6 @@ app.get('/ui/osx/1.0/featured/', function (req, res) {
 
 app.get('/ui/osx/1.0/package/:id/', function (req, res) {
   res.render('package', { 
-    title: 'Package',
     package: {
       identifier: 'ws.hbang.typestatusmac',
       name: 'TypeStatus',
@@ -61,7 +60,6 @@ app.get('/ui/osx/1.0/package/:id/', function (req, res) {
 
 app.get('/package/:id/', function (req, res) {
   res.render('package', { 
-    title: 'Package',
     package: {
       identifier: 'ws.hbang.typestatusmac',
       name: 'TypeStatus',
