@@ -189,7 +189,7 @@ side {
     right: 0px;
 }
 
-body.package side {
+side.package {
     padding-top: 156px;
 }
 

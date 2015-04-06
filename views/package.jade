@@ -16,7 +16,7 @@ block content
 			- else
 				article#description= package.description
 
-	side
+	side.package
 		- if (package.homepage != null)
 			a.link(href= package.homepage, role="button")= package.author.name + " Web Site"
 		- else 
