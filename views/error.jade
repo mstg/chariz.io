@@ -1,5 +1,13 @@
 extends layout
 
-block content
-	h1= error.status + " - " + message
-	pre #{error.stack}
+block title
+	title= message + " · Chariz"
+
+block body
+	body.error
+		block content
+			head
+				meta(name="viewport", content="width=device-width, initial-scale=1")
+			h1= message
+			p We're sorry, the page you are looking for could not be found. The page may no longer exist or have moved to a new location. Or, you may have followed an outdated link or mistyped the address in your browser. If you feel that the page you are looking for should be available, please let us know. Otherwise, you may continue to use the app through its navigation, or just view the error below.
+			pre #{error.stack}
