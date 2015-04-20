@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/ui/osx/1.0/featured/', function (req, res) {
-  res.render('featured', { 
+  res.render('osx/featured', { 
     title: 'Featured', 
     package: {
       identifier: 'ws.hbang.typestatusmac', 
@@ -39,7 +39,7 @@ app.get('/ui/osx/1.0/featured/', function (req, res) {
 })
 
 app.get('/ui/osx/1.0/package/:id/', function (req, res) {
-  res.render('package', { 
+  res.render('osx/package', { 
     package: {
       identifier: 'ws.hbang.typestatusmac',
       name: 'TypeStatus',
@@ -58,8 +58,8 @@ app.get('/ui/osx/1.0/package/:id/', function (req, res) {
   });
 })
 
-app.get('/package/:id/', function (req, res) {
-  res.render('package', { 
+app.get('/package/osx/:id/', function (req, res) {
+  res.render('osx/package', { 
     package: {
       identifier: 'ws.hbang.typestatusmac',
       name: 'TypeStatus',
@@ -72,8 +72,7 @@ app.get('/package/:id/', function (req, res) {
         name: 'HASHBANG Productions',
         email: 'support@hbang.ws'
       },
-      description: 'Ever wish you could tell when someone else is typing an iMessage to you or reading an iMessage you’ve sent from where ever you are? With TypeStatus, now you can. The contact’s name will be shown on your device’s status bar, regardless of where you are in OS X. You can also use a simple status bar icon instead of an overlay for typing notifications.',
-      depiction: 'https://io.tmnlsthrn.com/dep/ts.html'
+      description: 'Ever wish you could tell when someone else is typing an iMessage to you or reading an iMessage you’ve sent from where ever you are? With TypeStatus, now you can. The contact’s name will be shown on your device’s status bar, regardless of where you are in OS X. You can also use a simple status bar icon instead of an overlay for typing notifications.'
     }
   });
 })
