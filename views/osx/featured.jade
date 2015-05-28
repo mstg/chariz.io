@@ -11,74 +11,68 @@ block content
 		| .item label {margin:0 0 0 10px;font-size:11px;color:#000; overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
 		| .item label:hover {text-decoration:underline;}
 		| .item p {margin: 3px 0 0 10px;font-size:10px;color:#747474;}
+		| .space {overflow:hidden;height:100px;display:inline-block;margin-bottom:50px;max-width:945px;}
+		| .banner {display:inline-block;margin:0 30px;}
+		| .banner img {width:250px;height:100px;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;}
 
 	.carousel
 		img(src="//ui.chariz.io/osx/carousel/charizwelcome.png")
 
 	main
-			label Best New Tweaks
-			hr
-			.items
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
-					a.item(href="/osx/package/" + package.identifier)
-						img(src="/icon/" + package.identifier + "/128.png")
-						div
-							label= package.name
-							p= package.section
+		label Best New Tweaks
+		hr
+		.items
+			a.item(href="/osx/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+					div
+						label= package.name
+						p= package.section
+			a.item(href="/osx/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+					div
+						label= package.name
+						p= package.section
+			a.item(href="/osx/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+					div
+						label= package.name
+						p= package.section
+			a.item(href="/osx/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+					div
+						label= package.name
+						p= package.section
+			a.item(href="/osx/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+					div
+						label= package.name
+						p= package.section
+			a.item(href="/osx/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+					div
+						label= package.name
+						p= package.section
+			a.item(href="/osx/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+					div
+						label= package.name
+						p= package.section
+			a.item(href="/osx/package/" + package.identifier)
+				img(src="/icon/" + package.identifier + "/128.png")
+					div
+						label= package.name
+						p= package.section
+
+		.space
+			.banner
+				a(href="/osx/package/" + package.identifier)
+					img(src="//ui.chariz.io/osx/carousel/charizwelcome.png")
+			.banner
+				a(href="/osx/package/" + package.identifier)
+					img(src="//ui.chariz.io/osx/carousel/charizwelcome.png")
+			.banner
+				a(href="/osx/package/" + package.identifier)
+					img(src="//ui.chariz.io/osx/carousel/charizwelcome.png")
 
 	side
 		label Quick Links
