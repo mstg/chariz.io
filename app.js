@@ -58,7 +58,7 @@ app.get('/ui/osx/1.0/package/:id/', function (req, res) {
   });
 })
 
-app.get('/package/osx/:id/', function (req, res) {
+app.get('/osx/package/:id/', function (req, res) {
   res.render('osx/package', { 
     package: {
       identifier: 'ws.hbang.typestatusmac',
