@@ -2,9 +2,9 @@ extends layout
 
 block content
 	style
-		| .carousel {display:block;overflow-x:hidden;overflow-y:visible;margin:0 20px 0 20px;max-width:1160px;}
-		| .carousel img {height:300px;-webkit-border-bottom-right-radius: 9px;-webkit-border-bottom-left-radius: 9px;-moz-border-radius-bottomright: 9px;-moz-border-radius-bottomleft: 9px;border-bottom-right-radius: 9px;border-bottom-left-radius: 9px;}
-		| .items {float:left;display:-webkit-flex;-webkit-flex-flow: row wrap;justify-content:flex-start;align-content:flex-start;align-items:flex-start;min-height:300px;max-width:945px;}
+		| .carousel {display:block;overflow-x:hidden;margin:0 20px 0 20px;max-width:1160px;-webkit-border-bottom-right-radius: 9px;-webkit-border-bottom-left-radius: 9px;-moz-border-radius-bottomright: 9px;-moz-border-radius-bottomleft: 9px;border-bottom-right-radius: 9px;border-bottom-left-radius: 9px;}
+		| .carousel img {display:block;height:300px;}
+		| .items {margin-bottom:40px;float:left;display:-webkit-flex;-webkit-flex-flow: row wrap;justify-content:flex-start;align-content:flex-start;align-items:flex-start;min-height:200px;max-width:945px;}
 		| .item {min-width:200px;max-height:75px;margin:15px 0;}
 		| .item img {height:75px;}
 		| .item div {display:inline-block;vertical-align:top;min-width:155px;text-decoration:none;}
@@ -13,7 +13,7 @@ block content
 		| .item p {margin: 3px 0 0 10px;font-size:10px;color:#747474;}
 
 	.carousel
-		img(src="/carousel/osx/charizwelcome.png")
+		img(src="//ui.chariz.io/osx/carousel/charizwelcome.png")
 
 	main
 			label Best New Tweaks
