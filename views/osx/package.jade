@@ -6,7 +6,7 @@ block title
 block content
 	.container
 		.essential
-			img.icon(src="/icon/" + package.identifier + "/128.png", srcset="/icon/" + package.identifier + "/256.png 2x")
+			img.icon(src="//ui.chariz.io/icon/" + package.identifier + "/128.png", srcset="//ui.chariz.io/icon/" + package.identifier + "/256.png 2x")
 			a.buy-button(href="chariz://package/" + package.identifier, role="button", data-price=package.price)= package.price == 0 ? "FREE" : "$" + package.price
 
 		.moreinfo
@@ -49,23 +49,23 @@ block content
 		-if (package.dev != null)
 			label= "More by " + package.author.name
 			hr
-			a#more1(href="/package/" + package.identifier)
-				img(src="/icon/" + package.identifier + "/128.png")
+			a#more1(href="/osx/package/" + package.identifier)
+				img(src="//ui.chariz.io/icon/" + package.identifier + "/128.png")
 				div
 					label= package.name
 					p= package.section
-			a#more2(href="/package/" + package.identifier)
-				img(src="/icon/" + package.identifier + "/128.png")
+			a#more2(href="/osx/package/" + package.identifier)
+				img(src="//ui.chariz.io/icon/" + package.identifier + "/128.png")
 				div
 					label= package.name
 					p= package.section
-			a#more3(href="/package/" + package.identifier)
-				img(src="/icon/" + package.identifier + "/128.png")
+			a#more3(href="/osx/package/" + package.identifier)
+				img(src="//ui.chariz.io/icon/" + package.identifier + "/128.png")
 				div
 					label= package.name
 					p= package.section
-			a#more4(href="/package/" + package.identifier)
-				img(src="/icon/" + package.identifier + "/128.png")
+			a#more4(href="/osx/package/" + package.identifier)
+				img(src="//ui.chariz.io/icon/" + package.identifier + "/128.png")
 				div
 					label= package.name
 					p= package.section
