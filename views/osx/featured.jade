@@ -2,11 +2,14 @@ extends layout
 
 block content
 	.carousel
-		a(href= url.support)
-			img(src="//ui.chariz.io/osx/carousel/charizwelcome.png")
+		a(href=url.twitter, style="background-image: url(//ui.chariz.io/osx/carousel/welcome.png)")
 
 	main
-		label Best New Tweaks
+		.featuring
+			a(href="", style="color:#000;") Featured
+			a(href="#tweaks") Tweaks
+			a(href="#themes") Themes
+			
 		hr
 		.items
 			a.item(href="./package/" + package.identifier)
@@ -49,26 +52,19 @@ block content
 				div
 					label= package.name
 					p= package.section
+			a.item(href="./package/" + package.identifier)
+				img(src="//ui.chariz.io/icon/" + package.identifier + "/256.png")
+				div
+					label= package.name
+					p= package.section
+			a.item(href="./package/" + package.identifier)
+				img(src="//ui.chariz.io/icon/" + package.identifier + "/256.png")
+				div
+					label= package.name
+					p= package.section
 
 		.space
-			.banner
-				a(href="./package/" + package.identifier)
-					img(src="//ui.chariz.io/osx/banner/health.png")
-			.banner
-				a(href="./package/" + package.identifier)
-					img(src="//ui.chariz.io/osx/banner/nextride.jpg")
-			.banner
-				a(href="./package/" + package.identifier)
-					img(src="//ui.chariz.io/osx/banner/health.png")
-
-	side
-		label Quick Links
-		hr
-		a.link(href= url.signin) Sign In
-		a.link(href= url.account) Account
-		a.link(href= url.moresources) More Package Sources
-		a.link(href= url.support) Support
-
-		label Top Packages
-			a#sub(href="") See All
-		hr
+			a#left(href=url.twitter, style="background-image: url(//ui.chariz.io/osx/carousel/welcome.png)")
+			a(href=url.twitter, style="background-image: url(//ui.chariz.io/osx/carousel/welcome.png)")
+			a(href=url.twitter, style="background-image: url(//ui.chariz.io/osx/carousel/welcome.png)")
+			a#right(href=url.twitter, style="background-image: url(//ui.chariz.io/osx/carousel/welcome.png)")
